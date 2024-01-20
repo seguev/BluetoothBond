@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		603E258E2B5BFF4D008934B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E258D2B5BFF4D008934B2 /* AppDelegate.swift */; };
+		603E25902B5BFF4D008934B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E258F2B5BFF4D008934B2 /* SceneDelegate.swift */; };
+		603E25922B5BFF4D008934B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E25912B5BFF4D008934B2 /* ViewController.swift */; };
+		603E25952B5BFF4D008934B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603E25932B5BFF4D008934B2 /* Main.storyboard */; };
+		603E25982B5BFF4D008934B2 /* BluetoothBond.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 603E25962B5BFF4D008934B2 /* BluetoothBond.xcdatamodeld */; };
+		603E259A2B5BFF4E008934B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603E25992B5BFF4E008934B2 /* Assets.xcassets */; };
+		603E259D2B5BFF4E008934B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603E259B2B5BFF4E008934B2 /* LaunchScreen.storyboard */; };
+		603E25A92B5BFF4E008934B2 /* BluetoothBondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E25A82B5BFF4E008934B2 /* BluetoothBondTests.swift */; };
+		603E25B32B5BFF4E008934B2 /* BluetoothBondUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E25B22B5BFF4E008934B2 /* BluetoothBondUITests.swift */; };
+		603E25B52B5BFF4E008934B2 /* BluetoothBondUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E25B42B5BFF4E008934B2 /* BluetoothBondUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		603E25A52B5BFF4E008934B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603E25822B5BFF4D008934B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 603E25892B5BFF4D008934B2;
+			remoteInfo = BluetoothBond;
+		};
+		603E25AF2B5BFF4E008934B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603E25822B5BFF4D008934B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 603E25892B5BFF4D008934B2;
+			remoteInfo = BluetoothBond;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		603E258A2B5BFF4D008934B2 /* BluetoothBond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothBond.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		603E258D2B5BFF4D008934B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		603E258F2B5BFF4D008934B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		603E25912B5BFF4D008934B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		603E25942B5BFF4D008934B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		603E25972B5BFF4D008934B2 /* BluetoothBond.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BluetoothBond.xcdatamodel; sourceTree = "<group>"; };
+		603E25992B5BFF4E008934B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		603E259C2B5BFF4E008934B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		603E259E2B5BFF4E008934B2 /* BluetoothBond.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BluetoothBond.entitlements; sourceTree = "<group>"; };
+		603E259F2B5BFF4E008934B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603E25A42B5BFF4E008934B2 /* BluetoothBondTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothBondTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603E25A82B5BFF4E008934B2 /* BluetoothBondTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothBondTests.swift; sourceTree = "<group>"; };
+		603E25AE2B5BFF4E008934B2 /* BluetoothBondUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothBondUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603E25B22B5BFF4E008934B2 /* BluetoothBondUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothBondUITests.swift; sourceTree = "<group>"; };
+		603E25B42B5BFF4E008934B2 /* BluetoothBondUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothBondUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		603E25872B5BFF4D008934B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E25A12B5BFF4E008934B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E25AB2B5BFF4E008934B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		603E25812B5BFF4D008934B2 = {
+			isa = PBXGroup;
+			children = (
+				603E258C2B5BFF4D008934B2 /* BluetoothBond */,
+				603E25A72B5BFF4E008934B2 /* BluetoothBondTests */,
+				603E25B12B5BFF4E008934B2 /* BluetoothBondUITests */,
+				603E258B2B5BFF4D008934B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		603E258B2B5BFF4D008934B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				603E258A2B5BFF4D008934B2 /* BluetoothBond.app */,
+				603E25A42B5BFF4E008934B2 /* BluetoothBondTests.xctest */,
+				603E25AE2B5BFF4E008934B2 /* BluetoothBondUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		603E258C2B5BFF4D008934B2 /* BluetoothBond */ = {
+			isa = PBXGroup;
+			children = (
+				603E258D2B5BFF4D008934B2 /* AppDelegate.swift */,
+				603E258F2B5BFF4D008934B2 /* SceneDelegate.swift */,
+				603E25912B5BFF4D008934B2 /* ViewController.swift */,
+				603E25932B5BFF4D008934B2 /* Main.storyboard */,
+				603E25992B5BFF4E008934B2 /* Assets.xcassets */,
+				603E259B2B5BFF4E008934B2 /* LaunchScreen.storyboard */,
+				603E259E2B5BFF4E008934B2 /* BluetoothBond.entitlements */,
+				603E259F2B5BFF4E008934B2 /* Info.plist */,
+				603E25962B5BFF4D008934B2 /* BluetoothBond.xcdatamodeld */,
+			);
+			path = BluetoothBond;
+			sourceTree = "<group>";
+		};
+		603E25A72B5BFF4E008934B2 /* BluetoothBondTests */ = {
+			isa = PBXGroup;
+			children = (
+				603E25A82B5BFF4E008934B2 /* BluetoothBondTests.swift */,
+			);
+			path = BluetoothBondTests;
+			sourceTree = "<group>";
+		};
+		603E25B12B5BFF4E008934B2 /* BluetoothBondUITests */ = {
+			isa = PBXGroup;
+			children = (
+				603E25B22B5BFF4E008934B2 /* BluetoothBondUITests.swift */,
+				603E25B42B5BFF4E008934B2 /* BluetoothBondUITestsLaunchTests.swift */,
+			);
+			path = BluetoothBondUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		603E25892B5BFF4D008934B2 /* BluetoothBond */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603E25B82B5BFF4E008934B2 /* Build configuration list for PBXNativeTarget "BluetoothBond" */;
+			buildPhases = (
+				603E25862B5BFF4D008934B2 /* Sources */,
+				603E25872B5BFF4D008934B2 /* Frameworks */,
+				603E25882B5BFF4D008934B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluetoothBond;
+			productName = BluetoothBond;
+			productReference = 603E258A2B5BFF4D008934B2 /* BluetoothBond.app */;
+			productType = "com.apple.product-type.application";
+		};
+		603E25A32B5BFF4E008934B2 /* BluetoothBondTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603E25BB2B5BFF4E008934B2 /* Build configuration list for PBXNativeTarget "BluetoothBondTests" */;
+			buildPhases = (
+				603E25A02B5BFF4E008934B2 /* Sources */,
+				603E25A12B5BFF4E008934B2 /* Frameworks */,
+				603E25A22B5BFF4E008934B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				603E25A62B5BFF4E008934B2 /* PBXTargetDependency */,
+			);
+			name = BluetoothBondTests;
+			productName = BluetoothBondTests;
+			productReference = 603E25A42B5BFF4E008934B2 /* BluetoothBondTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		603E25AD2B5BFF4E008934B2 /* BluetoothBondUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603E25BE2B5BFF4E008934B2 /* Build configuration list for PBXNativeTarget "BluetoothBondUITests" */;
+			buildPhases = (
+				603E25AA2B5BFF4E008934B2 /* Sources */,
+				603E25AB2B5BFF4E008934B2 /* Frameworks */,
+				603E25AC2B5BFF4E008934B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				603E25B02B5BFF4E008934B2 /* PBXTargetDependency */,
+			);
+			name = BluetoothBondUITests;
+			productName = BluetoothBondUITests;
+			productReference = 603E25AE2B5BFF4E008934B2 /* BluetoothBondUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		603E25822B5BFF4D008934B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					603E25892B5BFF4D008934B2 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					603E25A32B5BFF4E008934B2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 603E25892B5BFF4D008934B2;
+					};
+					603E25AD2B5BFF4E008934B2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 603E25892B5BFF4D008934B2;
+					};
+				};
+			};
+			buildConfigurationList = 603E25852B5BFF4D008934B2 /* Build configuration list for PBXProject "BluetoothBond" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 603E25812B5BFF4D008934B2;
+			productRefGroup = 603E258B2B5BFF4D008934B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				603E25892B5BFF4D008934B2 /* BluetoothBond */,
+				603E25A32B5BFF4E008934B2 /* BluetoothBondTests */,
+				603E25AD2B5BFF4E008934B2 /* BluetoothBondUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		603E25882B5BFF4D008934B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603E259D2B5BFF4E008934B2 /* LaunchScreen.storyboard in Resources */,
+				603E259A2B5BFF4E008934B2 /* Assets.xcassets in Resources */,
+				603E25952B5BFF4D008934B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E25A22B5BFF4E008934B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E25AC2B5BFF4E008934B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		603E25862B5BFF4D008934B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603E25922B5BFF4D008934B2 /* ViewController.swift in Sources */,
+				603E258E2B5BFF4D008934B2 /* AppDelegate.swift in Sources */,
+				603E25902B5BFF4D008934B2 /* SceneDelegate.swift in Sources */,
+				603E25982B5BFF4D008934B2 /* BluetoothBond.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E25A02B5BFF4E008934B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603E25A92B5BFF4E008934B2 /* BluetoothBondTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603E25AA2B5BFF4E008934B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603E25B52B5BFF4E008934B2 /* BluetoothBondUITestsLaunchTests.swift in Sources */,
+				603E25B32B5BFF4E008934B2 /* BluetoothBondUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		603E25A62B5BFF4E008934B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 603E25892B5BFF4D008934B2 /* BluetoothBond */;
+			targetProxy = 603E25A52B5BFF4E008934B2 /* PBXContainerItemProxy */;
+		};
+		603E25B02B5BFF4E008934B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 603E25892B5BFF4D008934B2 /* BluetoothBond */;
+			targetProxy = 603E25AF2B5BFF4E008934B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		603E25932B5BFF4D008934B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				603E25942B5BFF4D008934B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		603E259B2B5BFF4E008934B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				603E259C2B5BFF4E008934B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		603E25B62B5BFF4E008934B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		603E25B72B5BFF4E008934B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		603E25B92B5BFF4E008934B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BluetoothBond/BluetoothBond.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TAJ6K5RR87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BluetoothBond/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.seguev.BluetoothBond;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		603E25BA2B5BFF4E008934B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BluetoothBond/BluetoothBond.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TAJ6K5RR87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BluetoothBond/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.seguev.BluetoothBond;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		603E25BC2B5BFF4E008934B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TAJ6K5RR87;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.seguev.BluetoothBondTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothBond.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BluetoothBond";
+			};
+			name = Debug;
+		};
+		603E25BD2B5BFF4E008934B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TAJ6K5RR87;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.seguev.BluetoothBondTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothBond.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BluetoothBond";
+			};
+			name = Release;
+		};
+		603E25BF2B5BFF4E008934B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TAJ6K5RR87;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.seguev.BluetoothBondUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BluetoothBond;
+			};
+			name = Debug;
+		};
+		603E25C02B5BFF4E008934B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TAJ6K5RR87;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.seguev.BluetoothBondUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BluetoothBond;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		603E25852B5BFF4D008934B2 /* Build configuration list for PBXProject "BluetoothBond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603E25B62B5BFF4E008934B2 /* Debug */,
+				603E25B72B5BFF4E008934B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603E25B82B5BFF4E008934B2 /* Build configuration list for PBXNativeTarget "BluetoothBond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603E25B92B5BFF4E008934B2 /* Debug */,
+				603E25BA2B5BFF4E008934B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603E25BB2B5BFF4E008934B2 /* Build configuration list for PBXNativeTarget "BluetoothBondTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603E25BC2B5BFF4E008934B2 /* Debug */,
+				603E25BD2B5BFF4E008934B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603E25BE2B5BFF4E008934B2 /* Build configuration list for PBXNativeTarget "BluetoothBondUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603E25BF2B5BFF4E008934B2 /* Debug */,
+				603E25C02B5BFF4E008934B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		603E25962B5BFF4D008934B2 /* BluetoothBond.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				603E25972B5BFF4D008934B2 /* BluetoothBond.xcdatamodel */,
+			);
+			currentVersion = 603E25972B5BFF4D008934B2 /* BluetoothBond.xcdatamodel */;
+			path = BluetoothBond.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 603E25822B5BFF4D008934B2 /* Project object */;
+}
