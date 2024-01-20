@@ -7,13 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BluetoothManagerDelegate {
 
+    @IBOutlet weak var debuggingTextView: UITextView!
+    let manager = BluetoothManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        manager.delegate = self
+        
     }
 
+    
+    
+    
+    
+    
 
 }
 
