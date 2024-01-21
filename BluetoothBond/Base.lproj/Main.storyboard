@@ -23,17 +23,23 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ctK-oW-WTY">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k9G-n9-hzC" secondAttribute="trailing" id="48y-Qg-arG"/>
+                            <constraint firstItem="ctK-oW-WTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Sg-IH-7uV"/>
                             <constraint firstItem="k9G-n9-hzC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Sj-0G-K70"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k9G-n9-hzC" secondAttribute="bottom" id="C50-1e-K71"/>
                             <constraint firstItem="k9G-n9-hzC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="waM-p4-47e"/>
+                            <constraint firstItem="ctK-oW-WTY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xaJ-C9-xtF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="ctK-oW-WTY" id="7l5-Ql-TBK"/>
                         <outlet property="debuggingTextView" destination="k9G-n9-hzC" id="HnR-ed-yW8"/>
                     </connections>
                 </viewController>

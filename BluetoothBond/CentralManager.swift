@@ -5,51 +5,58 @@
 //  Created by segev perets on 20/01/2024.
 //
 
-import Foundation
 import CoreBluetooth
 import UIKit
-
-protocol CentralManagerDelegate: BluetoothManager {
-    func log(_ text:String)
-}
 
 
 class CentralManager: NSObject, CBCentralManagerDelegate {
     
     weak var delegate: BluetoothManager?
     
-    override init() {
-        super.init()
-        central = .init(delegate: self, queue: nil)
-        delegate?.log("1. Central initialized")
-    }
+//    let peripheralManager = PeripheralManager()
     
     var central: CBCentralManager?
     
-    let peripheralManager = PeripheralManager()
+    override init() {
+        super.init()
+        central = .init(delegate: self, queue: nil,options: [CBCentralManagerOptionShowPowerAlertKey: true])
+        Logger.log(.info, "initializing central")
+    }
     
-    private var peripheral: CBPeripheral? {
+    private var connectedPeripheral: CBPeripheral? {
         didSet {
-            if let peripheral {
-                peripheral.delegate = peripheralManager
+            if let connectedPeripheral {
+                delegate?.centralIsScanning = false
+//                connectedPeripheral.delegate = peripheralManager
             }
         }
     }
     
+    func startScanning() {
+        Logger.log(.info, "Start scanning")
+        central!.scanForPeripherals(withServices: [BluetoothManager.TransferService.serviceUUID])
+    }
+    
+    func stopScanning() {
+        Logger.log(.info, "Stop scanning")
+        central!.stopScan()
+    }
+    
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        delegate?.log("2. Initial func is being called")
         self.central = central
         
         switch central.state {
         case .poweredOn:
-            delegate?.log("3. State == ON")
+            
             if let connectedPeri = central.retrieveConnectedPeripherals(withServices: [BluetoothManager.TransferService.serviceUUID]).last {
-                
+                Logger.log(.info, "Already connected!")
+                delegate?.centralIsScanning = false
                 central.connect(connectedPeri)
             } else {
-                delegate?.log("4. scanning for peripherals")
-                central.scanForPeripherals(withServices: nil)
-//                central.scanForPeripherals(withServices: [BluetoothManager.TransferService.serviceUUID])
+                delegate?.centralIsScanning = true
+                Logger.log(.info, "Central is scanning")
+                startScanning()
+                
             }
         default:
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
@@ -57,39 +64,41 @@ class CentralManager: NSObject, CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        
         guard let services = peripheral.services, !services.isEmpty else {return}
-        delegate?.log("5. Discovering peripherals")
-        print(peripheral.identifier)
-        if let services = peripheral.services {
-            print("With services:")
-            services.forEach { service in
-                if service == BluetoothManager.TransferService.serviceUUID {
-                    print("Match!")
-                    delegate?.log("Found device with appropriate services")
-                    
-                    self.peripheral = peripheral
-                    
-                    central.stopScan()
-                    
-                    delegate?.log("Connecting to it..")
-                    central.connect(peripheral)
-                } else {
-                    print("Not a match..")
-                }
+        
+        Logger.log(.warning, "Found someone!",peripheral.name ?? "No name")
+        
+        services.forEach { service in
+            if service == BluetoothManager.TransferService.serviceUUID {
+                
+                self.connectedPeripheral = peripheral
+                
+                self.stopScanning()
+                delegate?.centralIsScanning = false
+                
+                central.connect(peripheral)
+            } else {
+                Logger.log(.info, "Not a match")
             }
         }
-//        guard RSSI.intValue >= -50 else {return}
-        
         
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         
-        delegate?.log("Connected")
+        Logger.log(.info, #function)
         
         central.scanForPeripherals(withServices: [BluetoothManager.TransferService.serviceUUID])
     }
     
+    func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
+        Logger.log(.error, #function)
+    }
+    
+    func centralManager(_ central: CBCentralManager, connectionEventDidOccur event: CBConnectionEvent, for peripheral: CBPeripheral) {
+        Logger.log(.info, #function,event == .peerConnected ? "peerConnected" : "peerDisconnected" )
+    }
     
     
 }

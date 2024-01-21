@@ -7,14 +7,23 @@
 
 import UIKit
 import CoreBluetooth
-
-protocol BluetoothManagerDelegate: ViewController {
-    
-}
+import Combine
 
 class BluetoothManager {
     
-    weak var delegate: BluetoothManagerDelegate?
+    @Published var isScanning: Bool = false
+    
+    var centralIsScanning: Bool = false {
+        didSet {
+            isScanning = centralIsScanning && peripheralIsScanning
+        }
+    }
+    
+    var peripheralIsScanning: Bool = false{
+        didSet {
+            isScanning = centralIsScanning && peripheralIsScanning
+        }
+    }
     
     enum TransferService {
         static let serviceUUID = CBUUID(string: "E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
@@ -24,15 +33,8 @@ class BluetoothManager {
     let centralManager = CentralManager()
     let peripheralManager = PeripheralManager()
     
-    func log(_ text:String) {
-        delegate?.debuggingTextView.text += "\n"+text
-    }
     
-    init(delegate: BluetoothManagerDelegate? = nil) {
-        self.delegate = delegate
-        self.centralManager.delegate = self
-        self.peripheralManager.delegate = self
-    }
- 
+
+    
 
 }

@@ -20,6 +20,7 @@
 		603E25C42B5C011E008934B2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E25C32B5C011E008934B2 /* BluetoothManager.swift */; };
 		603E25C62B5C0342008934B2 /* CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E25C52B5C0342008934B2 /* CentralManager.swift */; };
 		603E25C82B5C035A008934B2 /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E25C72B5C035A008934B2 /* PeripheralManager.swift */; };
+		603E25CA2B5D8E78008934B2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E25C92B5D8E78008934B2 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		603E25C32B5C011E008934B2 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		603E25C52B5C0342008934B2 /* CentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralManager.swift; sourceTree = "<group>"; };
 		603E25C72B5C035A008934B2 /* PeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
+		603E25C92B5D8E78008934B2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				603E25C32B5C011E008934B2 /* BluetoothManager.swift */,
 				603E25C52B5C0342008934B2 /* CentralManager.swift */,
 				603E25C72B5C035A008934B2 /* PeripheralManager.swift */,
+				603E25C92B5D8E78008934B2 /* Logger.swift */,
 				603E25932B5BFF4D008934B2 /* Main.storyboard */,
 				603E25992B5BFF4E008934B2 /* Assets.xcassets */,
 				603E259B2B5BFF4E008934B2 /* LaunchScreen.storyboard */,
@@ -279,6 +282,7 @@
 				603E25982B5BFF4D008934B2 /* BluetoothBond.xcdatamodeld in Sources */,
 				603E25C82B5C035A008934B2 /* PeripheralManager.swift in Sources */,
 				603E25C62B5C0342008934B2 /* CentralManager.swift in Sources */,
+				603E25CA2B5D8E78008934B2 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,20 +8,17 @@
 import Foundation
 import CoreBluetooth
 
-protocol PeripheralManagerDelegate: BluetoothManager {
-    
-}
 
 class PeripheralManager: NSObject, CBPeripheralDelegate, CBPeripheralManagerDelegate {
     
     weak var delegate: BluetoothManager?
     
     var peripheralManager: CBPeripheralManager?
+    var name: String = "No name"
     
     override init() {
         super.init()
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: [CBPeripheralManagerOptionShowPowerAlertKey: true])
-        delegate?.log("5. Peripheral initialized")
     }
     
     var transferCharacteristic : CBMutableCharacteristic?
@@ -32,7 +29,7 @@ class PeripheralManager: NSObject, CBPeripheralDelegate, CBPeripheralManagerDele
     
     //MARK: setup
     private func setupPeripheral() {
-        delegate?.log("6. setupPeripheral")
+        Logger.log(.info, "Peri is being prepared")
         //initialize a new mutable characterstic
         transferCharacteristic = CBMutableCharacteristic(type: BluetoothManager.TransferService.characteristicUUID,
                                                          properties: [.notify,.writeWithoutResponse],
@@ -47,19 +44,20 @@ class PeripheralManager: NSObject, CBPeripheralDelegate, CBPeripheralManagerDele
         transferService.characteristics = [transferCharacteristic!] //force unwrap cause the init is literaly 2 lines above
         
         //add service to central
-        peripheralManager!.add(transferService)
-        startAdvertising()
-        
+        peripheralManager?.add(transferService)
+        Logger.log(.info, "Peri is ready for advertizing")
     }
     
     func startAdvertising() {
-        delegate?.log("7. startAdvertising")
-        peripheralManager!.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [BluetoothManager.TransferService.serviceUUID]])
-        print("Peripheral is advertizing!")
+        peripheralManager?.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [BluetoothManager.TransferService.serviceUUID]
+                                             ,CBAdvertisementDataLocalNameKey:self.name])
+
+        Logger.log(.info, "Peri is advertizing")
     }
     
     func stopAdvertising() {
-        peripheralManager!.stopAdvertising()
+        Logger.log(.warning, "Peri did stop advertizing")
+        peripheralManager?.stopAdvertising()
     }
     
     //MARK: Delegate funcs
@@ -83,13 +81,13 @@ class PeripheralManager: NSObject, CBPeripheralDelegate, CBPeripheralManagerDele
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         if let error {
-            print(error)
+            Logger.log(.error,#function,error)
         }
-        print("peripheral did discover")
+        Logger.log(.info, "Some one is trying to connect to peri")
         
         guard let services = peripheral.services else {print("no services!");return}
-        print("Found services")
         
+        Logger.log(.info, "Found services")
         for service in services {
             peripheral.discoverCharacteristics([BluetoothManager.TransferService.characteristicUUID], for: service)
         }
@@ -97,24 +95,19 @@ class PeripheralManager: NSObject, CBPeripheralDelegate, CBPeripheralManagerDele
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         if let error {
-            print(error)
+            Logger.log(.error,#function,error)
         }
         guard let characteristics = service.characteristics else {print("No characteristics!");return}
-        print("Found characteristics!")
-        
+        Logger.log(.info, "Found characteristics!")
         guard let char = characteristics.filter({ $0.uuid == BluetoothManager.TransferService.characteristicUUID }).first else {
-            print("Got characteristics but could not match")
+            Logger.log(.warning, "Got characteristics but could not match")
             return
         }
-        
-        print("Listening to char")
+        Logger.log(.info, "Listening to char")
         peripheral.setNotifyValue(true, for: char)
     }
     
-    
-    
     //MARK: Data handlers
-    
     func sendData(_ recievedData:Data) {
         
         guard let transferCharacteristic else {fatalError("You need to set the characteristics global variable")}
@@ -142,16 +135,18 @@ class PeripheralManager: NSObject, CBPeripheralDelegate, CBPeripheralManagerDele
             print(didSend ? "Sent!" : "Did not send!")
             
         } else {
-            fatalError("ho no its more than one chunk")
+            Logger.log(.error,#function,"ho no its more than one chunk")
+            fatalError()
         }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if let error {
-            print(error)
+            Logger.log(.error,#function,error)
         }
-        guard let data = characteristic.value else {print("No data");return}
-        print("Got data")
+        guard let data = characteristic.value else {Logger.log(.error, "No data");return}
+        Logger.log(.info, "Got data!")
+        Logger.log(.info,String(data: data, encoding: .utf8) ?? "no data")
         
         self.recievedData = data
     }
