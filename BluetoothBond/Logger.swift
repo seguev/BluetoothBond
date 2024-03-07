@@ -10,7 +10,7 @@ enum LogType {
     case error, warning, info
     var sign: String {
         switch self {
-        case .info: "ℹ️ "
+        case .info: "𝐢 "
         case .warning:"🚧 "
         case .error: "❌ "
         }
@@ -21,7 +21,7 @@ class Logger {
     static func log(_ type:LogType? = nil,_ items:Any...) {
     #if(DEBUG)
         let prefix = type?.sign ?? ""
-        print(prefix,items)
+        print(prefix,items,separator: ", ")
     #endif
     }
 }

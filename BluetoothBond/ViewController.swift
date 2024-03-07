@@ -7,7 +7,7 @@
 
 import UIKit
 import Combine
-
+let printNotification: NSNotification.Name = .init(rawValue: "printNotification")
 class ViewController: UIViewController {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        NotificationCenter.default.addObserver(self, selector: #selector(printToUserLog), name: printNotification, object: nil)
     }
     
     func bind() {
@@ -32,14 +33,16 @@ class ViewController: UIViewController {
                 }
             }
         }.store(in: &listeners)
-        
-        
     }
     
-    
-    
-    
+    @objc func printToUserLog(_ notification:Notification) {
+        let content = notification.object as! String
+        debuggingTextView.text += content+"\n"
+    }
     
 
 }
 
+func printToUser(_ content:String) {
+    NotificationCenter.default.post(name: printNotification, object: content)
+}
